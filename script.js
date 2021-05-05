@@ -12,5 +12,6 @@ const boton = document.getElementsByTagName('button')[0];
         //Buscamos dentro del arreglo y lo comparamos con la respuesta del prompt
         //Se usa operador ternario, tambien se puede hacer con un switch o if else
         const respuesta = (atracadores.find(a=>a.nombre === pregunta)) ? "Si es miembro del equipo, vamos por el": "No existe"
+        
         alert(respuesta);
     })
