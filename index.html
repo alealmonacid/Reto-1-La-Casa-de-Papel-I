@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-"width", initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reto - La casa de papel I</h1>
+    <p>Crear un programa que, dada una capital, indique si se trata de uno de los nombres elegidos por El Profesor para algúno de los miembros de su equipo o no.</p>
+    <button>Buscar Atracador</button>
+</body>
+<script>
+
+    const boton = document.getElementsByTagName('button')[0];
+    //Manipulamos DOM para ejecutar programa
+    boton.addEventListener('click', () =>{
+        //Creamos un arreglo donde salga cada nombre
+        const atracadores = [
+            {nombre: "Rio"}, 
+            {nombre: "Tokio"}, 
+            {nombre: "Moscú"}, 
+            {nombre: "Lisboa"}, 
+            {nombre: "Berlín"}]
+        const pregunta = prompt("Escribe el nombre del atracador");
+        //Buscamos dentro del arreglo y lo comparamos con la respuesta del prompt
+        //Se usa operador ternario, tambien se puede hacer con un switch o if else
+        const respuesta = (atracadores.find(a=>a.nombre === pregunta)) ? "Si es miembro del equipo, vamos por el": "No existe"
+        alert(respuesta);
+    })
+    
+</script>
+</html>
